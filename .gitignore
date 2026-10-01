@@ -1,0 +1,29 @@
+# Secrets / local config
+*.env
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.ppk
+id_rsa*
+terraform.tfvars
+*.tfvars
+!*.tfvars.example
+# Terraform state / providers
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+# Local inputs the scripts read
+*.csv
+# Agent/session state
+.claude/
+AGENTS.md
+CLAUDE.md
+# Runtime artifacts
+*.log
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
