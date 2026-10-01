@@ -1,0 +1,41 @@
+# Copy to terraform.tfvars and fill in. terraform.tfvars is gitignored.
+
+oci_profile      = "OCVPTEST"
+region           = "us-sanjose-1"
+home_region      = "us-ashburn-1"
+compartment_ocid = "ocid1.compartment.oc1..CHANGE_ME"
+
+name_prefix       = "vcflab"
+sddc_display_name = "vcflab-sddc" # <= 16 chars
+
+vcn_cidr  = "10.10.0.0/16"
+sddc_cidr = "10.10.0.0/21" # sliced into 16 equal prefix+4 segments, wizard-style (/21 -> /25)
+
+# Pinned stack (change only together with docs/vcf-bom-5.2.4.md)
+vmware_software_version = "8.0 update 3"
+esxi_software_version   = "esxi8u3k-25595708-1"
+
+# Topology: single-host lab. For a 3-host build set esxi_hosts_count = 3,
+# is_single_host_sddc = false, and vcf_byol_units = 156.
+esxi_hosts_count    = 1
+is_single_host_sddc = true
+host_shape          = "BM.DenseIO2.52"
+initial_commitment  = "HOUR"
+vcf_byol_units      = 52
+
+# Shared ACTIVE VCF BYOL registration (home region)
+vcf_byol_id = "ocid1.vmwarebyol.oc1..CHANGE_ME"
+
+# Operator-supplied ESXi SSH public key — paste the key content (D7)
+ssh_authorized_keys = "ssh-rsa AAAA... operator@workstation"
+
+# Lab-only public management access (D5). Off = wizard baseline.
+# admin_cidr must stay "" while the flag is false.
+enable_public_management = false
+admin_cidr               = "" # e.g. "203.0.113.10/32" when enabled
+
+# Standard tags (Project, ManagedBy, Deployment) are applied automatically;
+# uncomment to add or override.
+# freeform_tags = {
+#   CostCenter = "lab"
+# }

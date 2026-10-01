@@ -1,0 +1,1 @@
+vcsa-deploy install C:\Scripts\titanvc.json --accept-eula --acknowledge-ceip --no-esx-ssl-verify --log-dir=C:\Logs\VCSA
