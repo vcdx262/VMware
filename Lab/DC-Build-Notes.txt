@@ -1,0 +1,37 @@
+Create Secure string
+Set Secure Password $SecureString = ConvertTo-SecureString -String <your-password> -AsPlainText -Force
+
+Install DNS Role
+	Install-WindowsFeature -Name DNS -IncludeManagementTools
+
+Install AD Role
+	Install-WindowsFeature -Name AD-Domain-Services
+
+Install AD Forest
+
+	Install-ADDSForest -DomainName "lab.local" -InstallDNS
+
+Install Reverse DNS Zone
+
+	Add-DnsServerPrimaryZone -NetworkID "192.168.50.0/24" -ReplicationScope "Forest"
+
+Add-DnsServerResourceRecordA -ZoneName lab.local -Name k1-vcentera -IPv4Address 192.168.60.20 -CreatePtr
+
+Sysprep
+	
+	%WINDIR%\system32\sysprep\sysprep.exe /generalize /shutdown /oobe
+
+
+
+Server Core
+
+
+	Type "PowerShell" into prompt to enter PS CLI
+
+		Disable IPV6
+		New-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\services\TCPIP6\Parameters -Name DisabledComponents -PropertyType DWord -Value 0xffffffff
+
+		Disable Windows Firewall
+		Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled false
+
+

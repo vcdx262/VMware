@@ -1,0 +1,20 @@
+Lab Notes
+
+SSL Fix PowerShell Nuget Provider
+	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+Disable IPv6
+	HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TCPIP6
+		-Add Dword32 named "DisabledComponets"
+			-Set value to 0ff
+
+Disable Teredo Tunnel Adapter
+	CMD
+		netsh
+		interface
+		teredo
+		set state disabled
+	Device Management
+		-Enable Hidden devices
+		-Network adapters
+		-Disable Teredo / ISATAP Adapters
