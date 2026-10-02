@@ -1,12 +1,12 @@
 # NSX-T
 
-NSX-T scripts and configuration. Consolidated from the former standalone `NSXT`
-repository.
+NSX-T automation, configuration, and a deployment runbook. Consolidated from the former
+standalone `NSXT` repository.
 
 | File | Purpose |
 |---|---|
-| `nsx.cfg` | OVF-deployment property file for an NSX Manager lab appliance (hostname, networking, resource reservations). Passwords are placeholders — set before use. |
+| `nsx.cfg` | OVF-deployment property file for an NSX Manager lab appliance (passwords are placeholders — set before use) |
+| `NSX-T-Overlay-Deployment-Guide.md` | Manager → fabric prep → edge/T0/T1 → first overlay segment runbook |
 
-> More NSX-T automation to follow. The design/operational NSX experience behind this
-> (NSX-V and NSX-T migrations, rule-set/group migration, host-route IP migration) is
-> summarized in the repo root README.
+> Background includes NSX-V and NSX-T rule-set/group migrations and host-route–based IP
+> migration (migrating in groups as small as one workload). See the repo root README.

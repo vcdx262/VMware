@@ -16,6 +16,9 @@ session open (`Connect-VIServer`) first.
 | `Get-HBAs.ps1` | HBA inventory across all connected vCenters → CSV | Snippet (all vCenters) |
 | `Get-ScsiLun.ps1` | SCSI LUN inventory incl. SSD/vSAN state → CSV | Snippet (all vCenters) |
 | `Create-Vmotion.ps1` | Add vMotion VMkernel adapters from a collection | Snippet (`$vmotion`) |
+| `Install-PowerCLIBaseline.ps1` | Install PowerCLI + non-interactive baseline (CEIP off, cert action, single-server) | Parameterized tool |
 
 **Prerequisites:** VMware PowerCLI; a vCenter connection (`Connect-VIServer`). Edit the
 CSV / export paths near the top of each script for your environment.
+
+**Test plan:** `vSphere-Host-Buildout-Test-Plan.xlsx` — phase-by-phase cluster/host build validation.
