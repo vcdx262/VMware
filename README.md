@@ -17,15 +17,19 @@ VMware platforms.
 
 | Folder | Contents | Status |
 |---|---|---|
-| [ESXI](ESXI/) | Host deploy (nested ESXi) and a broad host-config verification toolkit | **Populated** |
+| [ESXI](ESXI/) | Host deploy (nested ESXi), broad host-config verification, PowerCLI baseline | **Populated** |
+| [Inventory](Inventory/) | vSphere inventory (clusters/hosts/VMs/datastores), cluster capacity/headroom, snapshot-aging + VM hygiene | **Populated** |
 | [Networking](Networking/) | VDS + distributed portgroup automation; vSwitch/portgroup reporting | **Populated** |
 | [VM-Provisioning](VM-Provisioning/) | CSV-driven Windows/Linux VM deployment from templates + customization specs | **Populated** |
-| [vCenter](vCenter/) | Scripted VCSA (`vcsa-deploy`) deployment specs and command reference | **Populated** |
+| [vCenter](vCenter/) | Scripted VCSA deploy specs + a `vcsa-deploy` wrapper (`Deploy-VCSA.ps1`) | **Populated** |
 | [Hardware](Hardware/) | Dell iDRAC (Redfish) and Cisco UCS inventory/audit | **Populated** |
 | [Lab](Lab/) | Windows/AD/DNS foundation for the vSphere home lab | **Populated** |
 | [VCF](VCF/) | **Terraform IaC** for a VMware-on-cloud (OCVS/OCI) SDDC — network + SDDC modules, BOM, design decisions | **Populated** |
-| [NSX-T](NSX-T/) | NSX-T config/automation (consolidated from the `NSXT` repo) | Seed |
-| [HCX](HCX/) · [NSX-V](NSX-V/) · [Tanzu](Tanzu/) · [vSAN](vSAN/) | Intended scope | Planned stubs |
+| [NSX-T](NSX-T/) | NSX-T config + overlay deployment guide (consolidated from the `NSXT` repo) | **Populated** |
+| [HCX](HCX/) | HCX migration-status script + migration runbook | **Populated** |
+| [vSAN](vSAN/) | vSAN health/validation test plan | **Populated** |
+| [docs](docs/) | vSphere cluster deployment guide | **Populated** |
+| [NSX-V](NSX-V/) · [Tanzu](Tanzu/) | Intended scope | Planned stubs |
 
 ## Highlights
 

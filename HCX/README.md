@@ -1,7 +1,13 @@
 # HCX
 
-Scope for **VMware HCX**: workload mobility and migration (bulk/vMotion/RAV), network extension, and cloud migration automation.
+VMware HCX workload-mobility tooling and a migration runbook.
 
-> **Planned.** No published automation here yet — this folder marks intended scope and
-> keeps the repository taxonomy consistent. See the repo root README for the hands-on
-> VMware HCX background behind it.
+| File | Purpose |
+|---|---|
+| `Get-HCXMigrationStatus.ps1` | Report migration status (type, state, progress, source/dest) via the HCX REST API; flags failed migrations |
+| `HCX-Migration-Runbook.md` | Site pairing → service mesh → network extension → migrate → cutover runbook |
+
+**Prerequisites:** PowerShell 7+ (self-signed HCX cert handling); HCX Connector/Manager reachable.
+
+> Maps to real HCX-based DR and datacenter-exit migration experience (bulk/vMotion/RAV,
+> network extension for IP-preserving moves).

@@ -14,6 +14,7 @@ IPs and datastores for your environment) before use.
 | `titanvc.json`, `titan1-vc-70.json` | Lab VCSA specs (named lab environments) |
 | `k1-vcenterA.json` | Lab site-A VCSA spec |
 | `vCenter-Deployment-Command.txt` | The `vcsa-deploy install` command/flags used to drive the above |
+| `Deploy-VCSA.ps1` | Parameterized wrapper around `vcsa-deploy` — precheck/install from a template; passwords injected from env vars at run time |
 
 > The JSON schema and comments originate from VMware's vCenter Server Appliance
 > installer samples; the values are lab-specific inputs.

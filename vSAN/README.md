@@ -1,7 +1,14 @@
 # vSAN
 
-Scope for **vSAN**: storage policy, health, and capacity reporting automation.
+vSAN validation tooling.
 
-> **Planned.** No published automation here yet — this folder marks intended scope and
-> keeps the repository taxonomy consistent. See the repo root README for the hands-on
-> vSAN background behind it.
+| File | Purpose |
+|---|---|
+| `vSAN-Health-Validation-Test-Plan.xlsx` | Phase-by-phase vSAN enablement + health + resilience validation (9-column tracker) |
+
+Capacity and datastore reporting for vSAN is covered by
+[`../Inventory/Get-vSphereInventory.ps1`](../Inventory/Get-vSphereInventory.ps1) (Datastores.csv)
+and [`../Inventory/Get-ClusterCapacity.ps1`](../Inventory/Get-ClusterCapacity.ps1).
+
+> Script-based vSAN health automation (`Test-VsanClusterHealth`, storage-policy compliance)
+> is on the roadmap.
